@@ -79,3 +79,9 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+              type="submit"
+            >
+              Sign up
+            </Button>
