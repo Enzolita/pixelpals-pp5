@@ -57,3 +57,14 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            <Form.Group controlId="password1">
+              <Form.Label className="d-none">Password</Form.Label>
+              <Form.Control
+                className={styles.Input}
+                type="password"
+                placeholder="Password"
+                name="password1"
+                value={password1}
+                onChange={handleChange}
+              />
+            </Form.Group>
