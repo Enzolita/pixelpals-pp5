@@ -34,3 +34,9 @@ const SignUpForm = () => {
       [event.target.name]: event.target.value,
     });
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/dj-rest-auth/registration/", signUpData);
+      history.push("/signin");
