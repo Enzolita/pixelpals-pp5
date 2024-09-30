@@ -65,3 +65,19 @@ function SignInForm() {
           setCurrentUser(userData);
         }
       }
+
+     // Navigate to the home page
+      navigate("/");
+    } catch (err) {
+      console.error("Login error:", err);
+      if (err.response) {
+        setErrors(err.response.data);
+      } else {
+        setErrors({ non_field_errors: ["An error occurred. Please try again."] });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
