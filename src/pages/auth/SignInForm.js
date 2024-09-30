@@ -41,3 +41,27 @@ function SignInForm() {
       const { data } = await axiosReq.post("/dj-rest-auth/login/", signInData);
       console.log("Initial data", data);
       setAuthorizationHeader(data);
+
+      const { data: userData } = await axiosReq.get("dj-rest-auth/user/");
+      console.log("User data after login:", userData);
+
+      // Fetch profile data
+      if (userData?.id) {  // Ensure you use the correct identifier for user data
+        try {
+          const { data: profileData } = await axiosReq.get(`profiles/${userData.id}/`);
+          console.log("Profile data after login:", profileData);
+          
+          // Combine user and profile data
+          const combinedData = {
+            ...userData,
+            profile: profileData
+          };
+          
+          setCurrentUser(combinedData);
+          console.log("Combined user and profile data:", combinedData);
+        } catch (profileErr) {
+          console.log("Error fetching profile:", profileErr);
+          // If profile doesn't exist, set user data without profile
+          setCurrentUser(userData);
+        }
+      }
