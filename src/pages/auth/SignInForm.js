@@ -42,6 +42,7 @@ function SignInForm() {
       console.log("Initial data", data);
       setAuthorizationHeader(data);
 
+      // Fetch user data after successful login
       const { data: userData } = await axiosReq.get("dj-rest-auth/user/");
       console.log("User data after login:", userData);
 
@@ -65,7 +66,7 @@ function SignInForm() {
           setCurrentUser(userData);
         }
       }
-
+      
      // Navigate to the home page
       navigate("/");
     } catch (err) {
@@ -119,3 +120,29 @@ function SignInForm() {
                 {message}
               </Alert>
             ))}
+
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Signing In..." : "Sign In"}
+            </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert key={idx} variant="warning" className="mt-3">
+                {message}
+              </Alert>
+            ))}
+          </Form>
+        </Container>
+        <Container className={`mt-3 ${appStyles.Content}`}>
+          <Link className={styles.Link} to="/signup">
+            Don't have an account? <span>Sign up now!</span>
+          </Link>
+        </Container>
+      </Col>
+    </Row>
+  );
+}
+
+export default SignInForm;
