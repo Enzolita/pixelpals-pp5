@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { axiosReq, setAuthorizationHeader } from "../../api/axiosDefaults";
-import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
-import { useRedirect } from "../../hooks/useRedirect";
+import axios from "axios"
+
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -18,7 +16,6 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
 function SignInForm() {
-  const setCurrentUser = useSetCurrentUser();
   const [signInData, setSignInData] = useState({
     username: "",
     password: "",
@@ -40,114 +37,57 @@ function SignInForm() {
       [event.target.name]: event.target.value,
     });
   };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Log in the user
-      const { data } = await axiosReq.post("/dj-rest-auth/login/", signInData);
-      console.log("Initial data", data);
-      setAuthorizationHeader(data);
-
-      // Fetch user data after successful login
-      const { data: userData } = await axiosReq.get("dj-rest-auth/user/");
-      console.log("User data after login:", userData);
-
-      // Fetch profile data
-      if (userData?.id) {  // Ensure you use the correct identifier for user data
-        try {
-          const { data: profileData } = await axiosReq.get(`profiles/${userData.id}/`);
-          console.log("Profile data after login:", profileData);
-          
-          // Combine user and profile data
-          const combinedData = {
-            ...userData,
-            profile: profileData
-          };
-          
-          setCurrentUser(combinedData);
-          console.log("Combined user and profile data:", combinedData);
-        } catch (profileErr) {
-          console.log("Error fetching profile:", profileErr);
-          // If profile doesn't exist, set user data without profile
-          setCurrentUser(userData);
-        }
-      }
-      
-     // Navigate to the home page
-      navigate("/");
-    } catch (err) {
-      console.error("Login error:", err);
-      if (err.response) {
-        setErrors(err.response.data);
-      } else {
-        setErrors({ non_field_errors: ["An error occurred. Please try again."] });
-      }
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <Row className={styles.Row}>
       <Col className="my-auto p-0 p-md-2" md={6}>
-        <Container className={`${appStyles.Content} p-4`}>
+        <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign in</h1>
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="username">
-              <Form.Label className="d-none">Username</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Username"
-                name="username"
-                className={styles.Input}
-                value={username}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-            ))}
+                <Form.Group controlId="username">
+                    <Form.Label className="d-none">Username</Form.Label>
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Username"
+                        name="username" 
+                        className={styles.Input}
+                        value={username}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
 
-            <Form.Group controlId="password">
-              <Form.Label className="d-none">Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                name="password"
-                className={styles.Input}
-                value={password}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            {errors.password?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-            ))}
-
-            <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Signing In..." : "Sign In"}
-            </Button>
-            {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
-                {message}
-              </Alert>
-            ))}
-          </Form>
+                <Form.Group controlId="password">
+                    <Form.Label className="d-none">Password</Form.Label>
+                    <Form.Control 
+                        type="password" 
+                        placeholder="Password" 
+                        name="password"
+                        className={styles.Input}
+                        value={password}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
+                <Button 
+                    className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+                    type="submit"
+                >
+                    Sign In
+                </Button>
+            </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signup">
             Don't have an account? <span>Sign up now!</span>
           </Link>
         </Container>
+      </Col>
+      <Col
+        md={6}
+        className={`my-auto d-none d-md-block p-2 ${styles.SignInCol}`}
+      >
+        <Image
+          className={`${appStyles.FillerImage}`}
+          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero.jpg"}
+        />
       </Col>
     </Row>
   );
