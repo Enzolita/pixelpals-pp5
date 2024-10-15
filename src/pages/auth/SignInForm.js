@@ -1,6 +1,12 @@
+/*
+ * Sign-in form with username and password inputs.
+ * Use useState for form data and errors, and useHistory for navigation.
+ * Handle form submission to authenticate user, update context, and navigate.
+ * Responsive layout for mobile and desktop views.
+ */
 import React, { useState } from "react";
 import axios from "axios";
-
+// Importing Bootstrap components for form and layout styling
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -8,42 +14,49 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-
+// Importing Link and useHistory hooks from react-router-dom for navigation
 import { Link, useHistory } from "react-router-dom";
-
+// Importing custom styles
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
+import picture from "../../assets/logo2.png";
 
+// Importing context hook to set the current user
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");
 
+    // State to manage sign-in form data
   const [signInData, setSignInData] = useState({
     username: "",
     password: "",
   });
   const { username, password } = signInData;
 
+   // State to manage errors
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
+
+    // Function to handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
+       // Sending a POST request to the login endpoint with sign-in data
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
-      setCurrentUser(data.user);
+      setCurrentUser(data.user); // Setting the current user in context
       setTokenTimestamp(data);
       history.goBack();
     } catch (err) {
-      setErrors(err.response?.data);
+      setErrors(err.response?.data); // Setting errors if the request fails
     }
   };
-
+  // Function to handle input changes and update state
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
@@ -115,7 +128,7 @@ function SignInForm() {
       >
         <Image
           className={`${appStyles.FillerImage}`}
-          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero.jpg"}
+          src={picture}
         />
       </Col>
     </Row>
