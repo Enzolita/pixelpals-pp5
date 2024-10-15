@@ -1,11 +1,27 @@
-.Navbar {
-    background-color: #ffff;
-    border: 1px solid #dadada;
+/* Styling for the navigation bar */
+.NavBar {
+    background-color: #ffffff;
+    border: 1px solid #2c2c8167;
+    box-shadow: 0 3px 10px #788dd3b6;
 }
+
+/* General styling for links in the navigation bar */
 .NavLink {
     padding: 5px;
 }
 
+/* Changes icon color when the navigation link is active */
+/* indicating the current page */
 .Active i {
-    color: blue;
+    color: #3f1ed3;
+}
+
+/* Logo image transition */
+.logoImg {
+    height: 55px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.logoImg:hover {
+    transform: scale(1.1);
 }
