@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
-import btnStyles from "../../styles/Button.module.css";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
@@ -35,19 +34,14 @@ function CommentEditForm(props) {
       }));
       setShowEditForm(false);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   };
 
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className="pr-1">
-        <Form.Label htmlFor="editCommentContent" className="sr-only">
-          Edit Comment
-        </Form.Label>
-
         <Form.Control
-          id="editCommentContent"
           className={styles.Form}
           as="textarea"
           value={formContent}
@@ -57,14 +51,14 @@ function CommentEditForm(props) {
       </Form.Group>
       <div className="text-right">
         <button
-          className={`${btnStyles.Button} ${btnStyles.Black}`}
+          className={styles.Button}
           onClick={() => setShowEditForm(false)}
           type="button"
         >
           cancel
         </button>
         <button
-          className={`${btnStyles.Button} ${btnStyles.Green}`}
+          className={styles.Button}
           disabled={!content.trim()}
           type="submit"
         >
