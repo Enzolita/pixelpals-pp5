@@ -14,6 +14,8 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import ReportForm from "./pages/report/ReportForm";
+import ReportSuccess from "./pages/report/ReportSuccess"; // Import the ReportSuccess component
 import DarkMode from "./components/Darkmode";
 
 import NotFound from "./components/NotFound";
@@ -76,7 +78,8 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route render={() => <p>Page not found!</p>} />
+          <Route exact path="/report" render={() => <ReportForm />} />
+          <Route exact path="/report-success" component={ReportSuccess} /> {/* Success route */}
           <Route render={() => <NotFound />} />
         </Switch>
       </Container>
