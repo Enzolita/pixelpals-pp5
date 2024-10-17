@@ -1,17 +1,10 @@
-/**
- * Custom code to cater for report management functionality.
- * ReportForm component allows authenticated users to submit reports
- * by providing a reason and report content. It handles form state,
- * submission, and validation errors.
- */
-
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
-import styles from "../../styles/ReportForm.module.css";
+import styles from "../../styles/ReportForm.module.css"; // Updated styles
 import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from "react-router-dom";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -19,13 +12,13 @@ import CustomModal from "../../components/CustomModal";
 
 function ReportForm() {
   const [reportData, setReportData] = useState({
-    report_reason: "",
-    report_content: "",
+    reason: "",
+    content: "",
   });
-  const { report_reason, report_content } = reportData;
+  const { reason, content } = reportData;
   const [errors, setErrors] = useState({});
-  const [showModal, setShowModal] = useState(false); // Modal state
-  const currentUser = useCurrentUser(); // Check if user is authenticated
+  const [showModal, setShowModal] = useState(false); 
+  const currentUser = useCurrentUser(); 
   const history = useHistory();
 
   // Redirect if user is not authenticated
@@ -50,13 +43,13 @@ function ReportForm() {
     let formErrors = {};
 
     // Client-side validation
-    if (!report_reason.trim()) {
-      formErrors.report_reason = ["Field cannot be empty"];
+    if (!reason.trim()) {
+      formErrors.reason = ["Field cannot be empty"];
     }
-    if (!report_content.trim()) {
-      formErrors.report_content = ["Field cannot be empty"];
-    } else if (report_content.length > 300) {
-      formErrors.report_content = ["Content field cannot exceed 300 characters"];
+    if (!content.trim()) {
+      formErrors.content = ["Field cannot be empty"];
+    } else if (content.length > 300) {
+      formErrors.content = ["Description cannot exceed 300 characters"];
     }
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
@@ -65,80 +58,69 @@ function ReportForm() {
 
     try {
       await axiosReq.post("/report/", reportData);
-      setReportData({ report_reason: "", report_content: "" }); // Reset form fields
+      setReportData({ reason: "", content: "" }); // Reset form fields
       setErrors({}); // Clear errors
-      setShowModal(true); // Show modal after successful submission
+      setShowModal(true);
     } catch (err) {
       setErrors(err.response?.data); // Set errors from response
-      setShowModal(false); // Hide modal if error occurs
+      setShowModal(false);
     }
   };
 
   return (
     <Container className={styles.ReportForm}>
-      <h1>Submit a Report</h1>
+      <h1>Report an Issue</h1>
       <Form onSubmit={handleSubmit}>
         {showModal && (
           <Alert variant="success">
             Your report has been submitted successfully!
           </Alert>
         )}
-        <Form.Group controlId="report_reason">
-          <Form.Label>Reason for Report</Form.Label>
+        <Form.Group controlId="issue">
+          <Form.Label>Issue</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter the reason for reporting"
-            name="report_reason"
-            value={report_reason}
+            placeholder="Enter the issue you want to report"
+            name="reason"
+            value={reason}
             onChange={handleChange}
           />
-          {errors.report_reason &&
-            errors.report_reason.map((message, idx) => (
-              <Alert
-                key={idx}
-                variant="warning"
-                className={styles.errorMessage}
-              >
+          {errors.reason &&
+            errors.reason.map((message, idx) => (
+              <Alert key={idx} variant="warning" className={styles.errorMessage}>
                 {message}
               </Alert>
             ))}
         </Form.Group>
-        <Form.Group controlId="report_content">
-          <Form.Label>Details of the Report</Form.Label>
+        <Form.Group controlId="description">
+          <Form.Label>Description</Form.Label>
           <Form.Control
             as="textarea"
             rows={6}
-            placeholder="Describe the issue or behavior being reported"
-            name="report_content"
-            value={report_content}
+            placeholder="Enter a detailed description"
+            name="content"
+            value={content}
             onChange={handleChange}
           />
-          {errors.report_content &&
-            errors.report_content.map((message, idx) => (
-              <Alert
-                key={idx}
-                variant="warning"
-                className={styles.errorMessage}
-              >
+          {errors.description &&
+            errors.description.map((message, idx) => (
+              <Alert key={idx} variant="warning" className={styles.errorMessage}>
                 {message}
               </Alert>
             ))}
         </Form.Group>
-        <Button
-          className={`${btnStyles.Button} ${btnStyles.Button}`}
-          type="Submit"
-        >
+        <Button className={`${btnStyles.Button} ${btnStyles.Green}`} type="Submit">
           Submit Report
         </Button>
       </Form>
 
-      {/* Custom modal for after successful report submission */}
+      {/* Modal for after successful submit */}
       <CustomModal
         show={showModal}
         handleClose={() => setShowModal(false)}
-        title="Report Submitted"
-        message="Thank you for submitting your report. Our team will review the issue shortly."
-        redirectPath="/" // Redirect after closing the modal
+        title="Thank You"
+        message="Your report has been submitted. Please note that this is a student project, and while your input is stored, it does not generate an email notification to an administrator. Your report will not be actively monitored. Thank you for your understanding!"
+        redirectPath="/" // Specify the redirect path
       />
     </Container>
   );
