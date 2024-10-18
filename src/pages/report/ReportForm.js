@@ -119,7 +119,7 @@ function ReportForm() {
         show={showModal}
         handleClose={() => setShowModal(false)}
         title="Thank You"
-        message="Your report has been submitted. Please note that this is a student project, and while your input is stored, it does not generate an email notification to an administrator. Your report will not be actively monitored. Thank you for your understanding!"
+        message="Your report has been submitted. We'll have a look at it as soon as we can!"
         redirectPath="/" // Specify the redirect path
       />
     </Container>
