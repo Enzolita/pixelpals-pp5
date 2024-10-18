@@ -119,7 +119,7 @@ function ReportForm() {
         show={showModal}
         handleClose={() => setShowModal(false)}
         title="Thank You"
-        message="Your report has been submitted. We'll have a look at it as soon as we can!"
+        message="Your report has been submitted. We'll have a look at is as soon as possible"
         redirectPath="/" // Specify the redirect path
       />
     </Container>
