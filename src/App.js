@@ -18,6 +18,7 @@ import ReportForm from "./pages/report/ReportForm";
 import DarkMode from "./components/Darkmode";
 
 import NotFound from "./components/NotFound";
+import MyReports from "./pages/report/MyReports";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -78,6 +79,7 @@ function App() {
             render={() => <ProfileEditForm />}
           />
           <Route exact path="/report" render={() => <ReportForm />} />
+          <Route exact path="/tickets" render={() => <MyReports />} />
           <Route render={() => <NotFound />} />
         </Switch>
       </Container>
