@@ -207,6 +207,17 @@ Get in Touch: Use our report form to reach out about any issues you're experienc
 ![x](documentation/existing-feat/report-form.png)
 
 ![x](documentation/existing-feat/report-modal.png)
+<br>
+
+#### Typography
+
+The main font used on the website is "DM Sans".
+
+![font](documentation/readme-image/font-dm-sans.png)
+
+<br>
+
+_<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 #### Reusable Component Design
 
 This application emphasizes modularity and reusability. Each component is designed to function independently and can be easily repurposed in different contexts. Some components have multiple uses across the app and offer potential for further applications.
