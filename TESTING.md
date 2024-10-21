@@ -175,7 +175,7 @@ _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 
 All Python files were run validated with pep8 and cleaned until no errors were found.
 
-![pep8](/documentation/testing_image/validate_python.png)
+![pep8](documentation/test-image/python_validate.png)
 
 </details>
 <br>
