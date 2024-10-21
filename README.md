@@ -1,65 +1,53 @@
-# Getting Started with Create React App
+# PixelPals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![x](documentation/Images/PixelGif.gif)
 
-## Available Scripts
+Pixelpals is a Full-Stack web application that empowers users to share engaging content, drawing inspiration from popular social media platforms like Instagram. Leveraging Django Rest Framework for robust backend operations and React for a responsive frontend, Pixelpals delivers a smooth, intuitive experience for users to browse, create, and interact with captivating content.
+<br>
+<br>
+Visit the website: [Pixelpals](https://pixelpals-pp5-ee2d5ecf265c.herokuapp.com/)
+<br>
 
-In the project directory, you can run:
+<hr>
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Pixelpals](#pixelpals)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - [Live Site](#live-site)
+  - [API Backend](#api-backend)
+  - [The Strategy Plane](#the-strategy-plane)
+    - [Development Goals and Corresponding User Stories](#development-goals-and-corresponding-user-stories)
+    - [Learning Outcomes and Skill Development](#learning-outcomes-and-skill-development)
+    - [Agile Planning and Development](#agile-planning-and-development)
+      - [Project Tracking (GitHub Projects)](#project-tracking-github-projects)
+      - [Epics](#epics)
+      - [User Stories](#user-stories)
+      - [MoSCoW Prioritization](#moscow-prioritization)
+  - [The Structure Plane](#the-structure-plane)
+    - [Wireframes](#wireframes)
+  - [The Skeleton Plane](#the-skeleton-plane)
+    - [Implemented Features](#implemented-features)
+    - [Future Features](#future-features)
+  - [The Surface Plane](#the-surface-plane)
+    - [Design](#design)
+    - [Technologies](#technologies)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [Heroku](#heroku-deployment)
+    - [Local Deployment](#local-deployment) -[How to Fork](#how-to-fork) -[How to Clone](#how-to-clone)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Acknowledgements](#acknowledgements)
 
-### `npm test`
+## Live Site
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Pixelpals site](https://pixelpals-pp5-ee2d5ecf265c.herokuapp.com/)
 
-### `npm run build`
+## API Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Pixelpals API README](https://github.com/Enzolita/pixelpals-backend/blob/main/README.md)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
