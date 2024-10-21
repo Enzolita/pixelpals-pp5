@@ -208,6 +208,35 @@ Get in Touch: Use our report form to reach out about any issues you're experienc
 
 ![x](documentation/existing-feat/report-modal.png)
 
+#### Tools and Services
+
+<details>
+<summary>List of Tools & Services</summary>
+
+<br>
+
+- [Am I Responsive?](http://ami.responsivedesign.is/) is used to show the website image on a range of devices.
+- [Balsamiq](https://balsamiq.com/) is used to create wireframes.
+- [CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) is used to check code ensuring that my CSS is error-free and adheres to the latest web standards.
+- [DevTools](https://developer.chrome.com/docs/devtools) to help in edit pages on-the-fly and diagnose problems quickly.
+- [Diffchecker - text](https://www.diffchecker.com/text-compare/) is used to check code snippets.
+- [Favicon.io](https://favicon.io/) is used to create favicon.
+- [Font Awesome](https://fontawesome.com/) is used for the iconography on the website.
+- [Git](https://git-scm.com/) is used for version control.
+- [Gitpod](https://gitpod.io) streamlines your development process by providing a pre-configured, cloud-based development environment that's instantly ready for coding.
+- [Github](https://github.com/) is essential for version control, allowing you to track changes, collaborate with others (if applicable), and secure online code storage.
+- [Google Dev Tools](https://developers.google.com/web/tools) is used during testing, debugging and styling.
+- [Google Fonts](https://fonts.google.com/) is a catalog of free, open-source fonts. Used for typography.
+- [Heroku](https://www.heroku.com) ia a platform for deploying and hosting web applications.
+- [Look](https:www.looka.com) ia used for the logo and symbol.
+- [Markup Validation Service](https://validator.w3.org/) is used to check code ensuring that my HTML is error-free and adheres to the latest web standards.
+- [UXwing](https://uxwing.com/) is a provider of free icons free for commercial use.
+
+</details>
+
+<br>
+
+_<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 </details>
 
 <br>
