@@ -207,6 +207,91 @@ Get in Touch: Use our report form to reach out about any issues you're experienc
 ![x](documentation/existing-feat/report-form.png)
 
 ![x](documentation/existing-feat/report-modal.png)
+#### Reusable Component Design
+
+This application emphasizes modularity and reusability. Each component is designed to function independently and can be easily repurposed in different contexts. Some components have multiple uses across the app and offer potential for further applications.
+
+<details>
+
+<summary>A selection of reusable components</summary>
+
+<br>
+
+**Asset component**
+
+- Purpose: Display a media asset, such as images, spinner animations, and messages.
+- Props: src, message, spinner
+- Usage: `const Asset` is considered a reusable component and has been reused in: NotFound.js, PostCreateForm.js, PostPage.js, PostsPage.js, PopularProfiles.js, ProfilePage.js to display a spinner whenever content is loading.
+- Potential uses: Loading spinners or media placeholders in any section of the application.
+
+**Avatar component**
+
+- Purpose: Display user profile images.
+- Props: profile, owner, image
+  Usage: `const Avatar` is considered a reusable component and has been reused in: NavBar.js, Comment.js, CommentCreateForm.js, Post.js and Profile.js to handle and import the avatar for the user
+- Potential uses: User profile displays, comment sections, and anywhere a user image is required.
+
+**Darkmode / Lightmode Component**
+
+- Purpose: This component provides the functionality to toggle between dark and light themes across the application, enhancing user experience by allowing them to choose their preferred display mode. It saves the user's selection locally (e.g., using local storage or cookies) to maintain the chosen theme across sessions and page reloads.
+- Props: setTheme: Function that toggles between light and dark modes. String representing the current theme, either "light" or "dark".
+- Usage: The SeclectedTheme component is reusable and has been implemented in Header.js and SettingsPage.js to enable theme switching in the application interface.
+- Potential uses: It can be utilized in any part of the application where users need the option to toggle between dark and light modes, such as the homepage, user profile settings, or dashboard interfaces.
+
+**Comment**
+
+- Purpose: Display a comment with options to edit or delete it if the current user is the owner.
+- Props: id, content, owner and more.
+- Usage:`const Comment`is considered a reusable component and has been reused in: PostPage.js to fetch comments related to the specific post.
+- Potential uses: Blog post comments, forum threads, product reviews, and profile pages to display user comments.
+
+**MoreDropdown Component**
+
+- Purpose: Provide a dropdown menu for actions like editing and deleting items. 
+- Props: handleEdit (function to handle the edit action), handleDelete (function to handle the delete action).
+- Usage: `const MoreDropdown` has been reused in Comment.js, Post.js and ProfilePage.js to render the dropdown menu the enable the user to edit their data.
+- Potential uses: Context menus for various content types that support edit and delete actions.
+
+**Navbar**
+
+- Purpose: Present a navigation bar for the application, including links and user authentication options. 
+- Usage: const Navbar is a reusable component and has been reused in App.js to render the navbar on the entire website, regardless of the URL path.
+- Potential uses: Could be adapted for use in different applications with minimal adjustments to routing and links.
+
+**Post**
+- Purpose: Display a specific post.
+- Props: id, title, content, owner and more.
+- Usage: const Post is a reusable component and has been reused in PostPage.js and PostsPage.js to display post data.
+- Potential uses: Featured post component, list of popular posts, forum threads, or portfolio showcases.
+
+**ProfileDataContext and CurrentUserContext**
+
+- Purpose: Manage user and profile data across the application.
+- Usage:
+  - CurrentUserContext: Provides current user data.
+  - ProfileDataContext: Provides profile data, such as popular profiles.
+- Used in: Various components requiring user or profile data.
+- Potential uses: Any component that needs to access or manipulate user-related state efficiently.
+
+**Profile**
+- Purpose: This component is designed to render a user profile with options for following/unfollowing and block/unblock based on the current user's interaction status with the profile.
+- Props: profile, owner, image
+- Usage: Can be used as a Community memeber widget, Author card in blog posts, Participant list in events pages. `const Profile*  is considered a reusable component and has been reused in: PopularProfiles.js to render the profiles in the popular profiles field.
+- Potential uses: Highly reusable, convenient to use anywhere where you need to show the profile/user associated with a piece of content. Community member widget, author card in blog posts, participant list in events pages.
+
+**Custom Hooks**
+- useClickOutsideToggle
+  - Purpose: Handle click outside events to toggle state.
+  - Usage: Can be reused in any component that needs to handle click outside functionality.
+- useRedirect
+  - Purpose: Redirect users based on their authentication status.
+  - Usage: Can be reused in any component that needs to handle user redirects based on authentication.
+
+**Utility Functions**
+- Utility functions (e.g., date formatting, data validation)
+- Purpose: General-purpose functions that can be used across different parts of the application.
+
+</details>
 
 #### Tools and Services
 
