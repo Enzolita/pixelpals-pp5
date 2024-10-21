@@ -127,6 +127,89 @@ _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
     - Update - authenticated users can update their profile image, username and password, and edit and save comments, its title and save it.
     - Delete - authenticated users can delete their own comments and posts.
 
+**SignIn/SignUp Page** <br>
+
+Join the Fun: Creating an account is easy-peasy. After signing up, you’ll be whisked to the sign-in page. Already signed in? You’ll head straight to the home page.
+
+![X](documentation/existing-feat/sign-in.png)
+
+![X](documentation/existing-feat/sign-up.png)
+
+**Navigation Bar** <br>
+Always There for You: The navigation bar adapts to whether you’re signed in or not, and it looks great on any screen size.
+
+![x](documentation/existing-feat/iph-nav.png)
+
+![x](documentation/existing-feat/navbar.png)
+
+**Profile Page**
+<br>
+Showcase Yourself: See detailed info about users, including posts, followers, and who they follow. If you follow them, it’s highlighted. Add personal touches with a dedicated info section. Follow or hide users unless it’s your own profile. All posts from the profile owner are displayed below. Click on the three dots and edit your profile, change username, change password
+
+![x](documentation/existing-feat/profile-edit-dropdown.png)
+
+![x](documentation/existing-feat/full-profile-own.png)
+
+![x](documentation/existing-feat/edit-profile-bio.png)
+
+![x](documentation/existing-feat/edit-profile-name.png)
+
+![x](documentation/existing-feat/edit-profile-pw.png)
+
+**Profiles Sidebar**
+<br>
+Popular Profiles: Check out the most followed profiles. Follow or unfollow with a click, and enjoy a sidebar that fits perfectly on any screen. The profile sidebar is always present on screens that are large enough. On smaller screens, it appears in a smaller section above the main content, and on certain pages it is removed.
+
+![x](documentation/existing-feat/popular-profile.png)
+
+**Posts page**
+<br>
+Endless Inspiration: Browse posts infinitely! Use the search bar to find posts by title or username. Use category to filter. See your personalized feed of posts from those you follow and liked posts. Blocked users won’t show up.
+
+![x](documentation/existing-feat/post-list.png)
+
+Follow/unfollow
+
+![x](documentation/existing-feat/follow-unfollow.png)
+
+Like/unlike
+
+![x](documentation/existing-feat/like-unlike.png)
+
+Darkmode / Lightmode
+
+![x](documentation/existing-feat/darkmode-lightmode.png)
+
+**Post Page**
+<br>
+Dive into Details: See all the nitty-gritty about a post, including comments. Edit or delete your posts easily. Tag posts with one category, and (once the bug’s fixed) multiple hashtags. The multi-hashtag feature is hidden for now due to [BUG#68](https://github.com/JaqiKal/pixavibe-frontend/issues/68). Like the category tagging, it offers a predefined list to select/deselect multiple hashtags. However, once a post is saved, you can't change the hashtags during edits. To avoid a bad user experience, we've temporarily hidden this feature in the belly of our scrumptious app.
+
+Owner´s post(s), me, myself and I!
+
+![x](documentation/existing-feat/post-detail-own.png)
+
+Edit Image, Title, Content, Category
+
+![x](documentation/existing-feat/edit-postdetail.png)
+
+Dropdown menu for edit and delete of individual post.
+
+![x](documentation/existing-feat/edit-delete.png)
+
+Edit Comments
+
+![x](documentation/existing-feat/edit-delete-comment.png)
+
+**Report Form**
+<br>
+Get in Touch: Use our report form to reach out about any issues you're experiencing or feeling. A custom made modal will thank you for your message.
+
+![x](documentation/existing-feat/report-form.png)
+
+![x](documentation/existing-feat/report-modal.png)
+
+</details>
+
 <br>
 
 _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
