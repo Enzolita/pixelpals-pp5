@@ -3,47 +3,47 @@ import axios from "axios";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import styles from "../../styles/MyReports.module.css";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import CustomModal from "../../components/CustomModal";
+import Alert from "react-bootstrap/Alert";
 
 export default function MyReports() {
   const [reportTitle, setReportTitle] = useState("");
   const [reportContent, setReportContent] = useState("");
   const [reports, setReports] = useState([]);
   const [edit, setEdit] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [reportId, setReportId] = useState(0);
   const currentUser = useCurrentUser();
   const history = useHistory();
-
+  
+  
   useEffect(() => {
     getReports();
-  }, []);
+  }, [])
 
   const getReports = async () => {
     const data = await axios.get("/report");
     setReports(data?.data?.results);
-    console.log(data);
   };
 
   const deleteReports = async (reportId) => {
     try {
       await axiosReq.delete(`/report/${reportId}`);
       setReports(reports.filter((report) => report.id !== reportId));
-      console.log(`Report with id ${reportId} deleted.`);
+      setShowModal(true);
     } catch (error) {
       console.error("Error deleting report:", error);
     }
   };
 
   const editReports = (reportId) => {
-    console.log(reportId);
     setEdit(true);
     setReportId(reportId);
   };
 
   const handleSubmitEdit = async (e) => {
     e.preventDefault();
-    console.log(reportId);
-
     try {
       await axiosReq.patch(`/report/${reportId}/`, {
         reason: reportTitle,
@@ -55,35 +55,77 @@ export default function MyReports() {
     }
   };
 
+  
+  if (reports?.filter((report) => report.profile_id === currentUser.pk).length <= 0) {
+    return (
+      <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <Row>
+          <Col>
+            <Alert variant="secondary" className="text-center">
+              No Reports Available
+            </Alert>
+          </Col>
+        </Row>
+      </Container>
+    );
+  } 
+
   return (
     <>
-      {!edit ? (
+        <CustomModal
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+        title="Thank You"
+        message="Your report has been deleted."
+      />
+      {!edit ? (     
         reports
           ?.filter((report) => report.profile_id === currentUser.pk)
           .map((report) => (
-            <div className={styles.MyReports} key={report.id}>
-              {report.reason} {report.profile_id}
-              <button onClick={() => deleteReports(report.id)}>Delete</button>
-              <button onClick={() => editReports(report.id)}>Edit</button>
+            <div key={report.id}>
+              {report.reason} {report.content}
+              <Button variant="danger" onClick={() => deleteReports(report.id)}>Delete</Button>
+              <Button variant="primary" onClick={() => editReports(report.id)}>Edit</Button>
             </div>
           ))
+          
       ) : (
-        <>
-          <div className="MyReports">Edit Report</div>
-          <form className="MyReports" onSubmit={handleSubmitEdit}>
-            <input
-              type="text"
-              onChange={(e) => setReportTitle(e.target.value)}
-              placeholder="Edit report title"
-            />
-            <input
-              type="text"
-              onChange={(e) => setReportContent(e.target.value)}
-              placeholder="Edit report content"
-            />
-            <button type="submit">Submit</button>
-          </form>
-        </>
+        <Container style={{ maxWidth: "600px", padding: "50px", backgroundColor: "#c8cae557", minHeight: "400px", borderRadius: "5px" }}>
+           <div key={report.id}>
+              {report.reason} {report.content}
+              <Button variant="danger" onClick={() => deleteReports(report.id)}>Delete</Button>
+              <Button variant="primary" onClick={() => editReports(report.id)}>Edit</Button>
+                type="text"
+                placeholder="Enter the issue you want to report"
+                value={reportTitle}
+                onChange={(e) => setReportTitle(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formReportDescription">
+              <Form.Label>Description</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Enter a detailed description"
+                value={reportContent}
+                onChange={(e) => setReportContent(e.target.value)}
+              />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">
+              Submit Report
+            </Button>
+            <Button
+              variant="secondary"
+              className="ml-2"
+              onClick={() => setEdit(false)}
+            >
+              Cancel
+            </Button>
+          </Form>
+          {/* Modal for after successful submit */}
+        </Container>
       )}
     </>
   );
