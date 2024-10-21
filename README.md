@@ -472,3 +472,48 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 
+### Credits
+
+#### Content
+
+<details>
+<summary>List of content</summary> 
+<br>
+Throughout the development of Pixelpals, we utilized a variety of resources to ensure the platform is robust, user-friendly, and engaging. Below is a list of documentation, blogs, tutorials, and guides that have been instrumental in crafting the features and functionality of Pixelpals:
+
+- [Favicon, credited to](https://www.flaticon.com/free-icons/photography") Photography icons created by Vactor area- Flaticon
+- Logo used was created at [Looka](https://looka.com/dashboard)
+- [React Multiselect dropdown](https://www.npmjs.com/package/multiselect-react-dropdown), this library is used for handling hashtags. It helps keep the codebase cleaner and more maintainable.
+- [css-validator](https://www.npmjs.com/package/css-validator) together with GPT was used to create `validate-css.js`. It was used to validate CSS.
+- **Bootstrap**: Used for styling and responsive design, making the site accessible on a variety of devices - [Bootstrap documentation](https://getbootstrap.com/).
+- **Sources of inspiration and guidance in general**:
+  - This resources is only available to enrolled students at The Code Institute:
+    - The Code Institute Diploma in Full Stack Software Development (Advanced Front-End) Walk-through project Moments (frontend)
+  - [React](https://react.dev/learn) A goto place to learn.
+  - [Django Rest framework](https://www.django-rest-framework.org/) A got place to learn
+  - [Django & React Tutorial](https://youtu.be/JD-age0BPVo?si=vLYojx9J_rD8ZKyU), Tech with Tim, also a goto net source for inspo.
+- **Testing**: Used to learn how to create test cases
+  - [How to write test cases for Django Rest Framework Applications](https://rajansahu713.medium.com/mastering-the-art-of-django-test-cases-fa7b0322c9fb)
+  - [Django REST framwork, Testing](https://www.django-rest-framework.org/api-guide/testing/#testingDjango)
+  - [django project, testing](https://docs.djangoproject.com/en/3.2/topics/testing/)
+  - [Getting started with testing in Python](https://realpython.com/python-testing/)
+  - [Testing in Django (Part 1) – Best Practices and Examples](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/)
+  - [serie of videos - Django Testing Tutorial - What Is Testing?](https://youtu.be/qwypH3YvMKc?si=1OptYFWRajgREWh_)
+  - [Unit Tests in Python || Python Tutorial || Learn Python Programming](https://youtu.be/1Lfv5tUGsn8?si=ZgIDWVjSQqTIUYYK)
+  - [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) are used in test cases to validate that the application is behaving as expected under various conditions.
+  </details>
+
+#### Acknowledgements
+
+<details>
+<summary>I would like to thank!</summary>
+<br>
+
+- My immediate and extended family, as well as my friends, who support and cheer me on!
+- To all engaged fellow students at all channels and a special shout out to #community-sweden!
+- Code Institutes Tutor Support service, their help has been a source of immense relief when in total panic! Also yet another channel to gain more knowhow from.
+- My mentor [Jubril Akolade](https://github.com/jubrillionaire/)
+</details>
+<br>
+
+_<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
