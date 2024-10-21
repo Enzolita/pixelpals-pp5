@@ -48,6 +48,42 @@ Visit the website: [Pixelpals](https://pixelpals-pp5-ee2d5ecf265c.herokuapp.com/
 
 [Pixelpals API README](https://github.com/Enzolita/pixelpals-backend/blob/main/README.md)
 
+## The Structure Plane
+
+### Wireframes
+
+<details>
+<summary>All Wireframe Images</summary>
+<br>
+
+Login/Signup
+
+![X](documentation/wireframes/wireframe-login_register.png)
+
+Posts Page
+
+![X](documentation/wireframes/wireframe-posts.png)
+
+Post Page
+
+![X](documentation/wireframes/wireframe-postdetail.png)
+
+Profile
+
+![X](documentation/wireframes/wireframe-profile.png)
+
+Report
+
+![X](documentation/wireframes/wireframe-report.png)
+
+Log out
+
+![X](documentation/wireframes/wireframe-logout.png)
+
+</details>
+<br>
+
+_<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 
 ### Deployment
 
