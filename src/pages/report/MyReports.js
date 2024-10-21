@@ -91,10 +91,11 @@ export default function MyReports() {
           
       ) : (
         <Container style={{ maxWidth: "600px", padding: "50px", backgroundColor: "#c8cae557", minHeight: "400px", borderRadius: "5px" }}>
-           <div key={report.id}>
-              {report.reason} {report.content}
-              <Button variant="danger" onClick={() => deleteReports(report.id)}>Delete</Button>
-              <Button variant="primary" onClick={() => editReports(report.id)}>Edit</Button>
+          <h2 className="mb-4">Report an Issue</h2>
+          <Form onSubmit={handleSubmitEdit}>
+            <Form.Group controlId="formReportIssue">
+              <Form.Label>Issue</Form.Label>
+              <Form.Control
                 type="text"
                 placeholder="Enter the issue you want to report"
                 value={reportTitle}
