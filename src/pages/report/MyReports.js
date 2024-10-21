@@ -61,7 +61,7 @@ export default function MyReports() {
         reports
           ?.filter((report) => report.profile_id === currentUser.pk)
           .map((report) => (
-            <div className="MyReports" key={report.id}>
+            <div className={styles.MyReports} key={report.id}>
               {report.reason} {report.profile_id}
               <button onClick={() => deleteReports(report.id)}>Delete</button>
               <button onClick={() => editReports(report.id)}>Edit</button>
