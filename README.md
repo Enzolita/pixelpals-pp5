@@ -369,8 +369,106 @@ _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<details>
+<summary>Version Control</summary>
+<br>
+The site was created using the Gitpod editor and pushed to github to the remote repository ‘pixelpals-frontend’.
+The following git commands were used throughout development to push code to the remote repo:
 
-### `npm run build` fails to minify
+- `git add <file>` - This command was used to add the file(s) to the staging area before they are committed.
+- `git commit -m “commit message”` - This command was used to commit changes to the local repository queue ready for the final step.
+- `git push` - This command was used to push all committed code to the remote repository on github.
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Heroku Deployment
+
+ <details>
+ <summary>To deploy the project to Heroku</summary>
+ 
+ <br>
+
+**Preparing the Application**
+
+- Create and add the 'Procfile' to your application's root directory `echo web: node index.js > Procfile`. Heroku relies on this file to determine how to run your application, ensuring the correct setup of your web server. Use commands like web: `gunicorn PROJ_NAME.wsgi` in the 'Procfile' to instruct Heroku on starting your web server with Gunicorn
+- Ensure you have a requirements.txt file listing all project dependencies.
+- Set up necessary configuration variables in Heroku setting tab > Config Vars (eg. SECRET_KEY, DATABASE_URL, etc.).
+- In your app's 'settings.py' add Heroku to ALLOWED_HOSTS
+
+**Initial set-up**
+
+- Sign up for a [Heroku](https://heroku.com/) account at Heroku's website.
+- Download and install the Heroku Command Line Interface (CLI) to interact with Heroku from your local machine.
+- Or use Heroku Web interface.
+
+**Create Heroku App**
+
+- Sign in or sign up to [Heroku](https://heroku.com/).
+- Click the button that says "Create new app."
+- Enter a unique app name.
+- Choose your region from the dropdown menu.
+- Click the "Create app" button.
+- Scroll further down on the page, select Add Buildpack. The buildpacks will install further dependencies that are not included in the 'requirements.txt'. <br>
+  It's crucial to arrange the build packs correctly! First, choose Python and then Node.js. If they're not in this sequence, you can reorder them by dragging.
+
+**Deployment**
+
+- Deploy by either push your code to Heroku or by connecting your GitHub repository to Heroku or using the Heroku CLI to deploy your application.
+- (if applicable) Run database migrations using the Heroku CLI.
+- For deploying this project, we're using GitHub as our method. After choosing GitHub, make sure to confirm the connection. Then, search for your repository name and once Heroku finds your repository - click "connect"
+- Scroll down to the section "Automatic Deploys".
+- Click "Enable automatic deploys" or choose "Deploy branch" and manually deploy.
+- Click "Deploy branch" wait for the app to be built. Once this is done, a message should appear letting us know that the app was successfully deployed.
+- Click the button "View" to see the app.
+
+**Final Steps**
+
+- Enable the Web Dyno, make sure the web dyno is up and running after deployment.
+- Open your application from the Heroku dashboard or using the CLI command heroku open.
+
+For more detailed instructions and troubleshooting, visit the [official Heroku Dev Center](https://devcenter.heroku.com/).
+
+</details>
+
+#### Local Deployment
+
+<details>
+<summary>How to clone:</summary>
+<br>
+
+Cloning a GitHub repository creates a local copy on your machine, allowing you to sync between the two locations. Here are the steps:
+
+- Navigate to the GitHub Repository you want to clone to use locally.
+- Click on the code drop down button.
+- Click on HTTPS.
+- Copy the repository link to the clipboard.
+- Open your IDE of choice (git must be installed for the next steps). 
+- Navigate to the directory where you want the clone to be created.
+- Type `git clone`, and then paste the URL you copied previously. Press Enter to create your local clone.
+
+Install Dependencies:
+
+`npm install`
+
+Run Application:
+
+`npm start`
+
+</details>
+<br>
+
+<details>
+<summary>How to Fork</summary>
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. In order to protect the main branch while you work on something new, essential when working as part of a team or when you want to experiment with a new feature, you will need to fork a branch.
+
+- Log in (or sign up) to Github.
+- Go to the selected repository.
+- Click the Fork button in the top right corner and select create a fork.
+- One can change the name of the fork and add description
+- Choose to copy only the main branch or all branches to the new fork.
+- Click Create a Fork. A repository should appear in your GitHub
+</details>
+<br>
+
+_<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
+
