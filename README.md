@@ -542,6 +542,8 @@ Throughout the development of Pixelpals, we utilized a variety of resources to e
   - [serie of videos - Django Testing Tutorial - What Is Testing?](https://youtu.be/qwypH3YvMKc?si=1OptYFWRajgREWh_)
   - [Unit Tests in Python || Python Tutorial || Learn Python Programming](https://youtu.be/1Lfv5tUGsn8?si=ZgIDWVjSQqTIUYYK)
   - [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) are used in test cases to validate that the application is behaving as expected under various conditions.
+  - [Darkmode react tutorial](https://www.youtube.com/watch?v=Uz35Qiia84g) Darkmode tutorial I used.
+
   </details>
 
 #### Acknowledgements
