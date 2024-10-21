@@ -546,9 +546,8 @@ Throughout the development of Pixelpals, we utilized a variety of resources to e
 <summary>I would like to thank!</summary>
 <br>
 
-- My immediate and extended family, as well as my friends, who support and cheer me on!
-- To all engaged fellow students at all channels and a special shout out to #community-sweden!
-- Code Institutes Tutor Support service, their help has been a source of immense relief when in total panic! Also yet another channel to gain more knowhow from.
+- To all engaged fellow students at all channels.
+- Code Institutes Tutor Support service.
 - My mentor [Jubril Akolade](https://github.com/jubrillionaire/)
 </details>
 <br>
