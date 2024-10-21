@@ -304,6 +304,19 @@ This application emphasizes modularity and reusability. Each component is design
 
 </details>
 
+### Technologies
+
+<details>
+<summary>List of technologies and Languages used</summary>
+<br>
+
+#### Language
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) is used to structure the content of the application.
+- [CSS](https://en.wikipedia.org/wiki/CSS) is applied to style the application, enhancing the user interface..
+- [JavaScript](https://sv.wikipedia.org/wiki/Javascript) adds interactivity to web pages, improving the user experience.
+- [JSX](https://legacy.reactjs.org/docs/faq-build.html#gatsby-focus-wrapper) & [Intro JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
+
 #### Tools and Services
 
 <details>
