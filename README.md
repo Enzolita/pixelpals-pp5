@@ -226,6 +226,16 @@ Get in Touch: Use our report form to reach out about any issues you're experienc
 <br>
 
 _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
+
+## The Surface Plane
+
+### Design
+
+<details>
+<summary>Colour-Scheme, Typography and Imagery</summary>
+<br>
+The idea of ​​the color scheme of the application is a little towards blue and neutral white due to the darkmode component,
+which makes the backround either white or dark grey.
 <br>
 
 #### Typography
@@ -237,6 +247,14 @@ The main font used on the website is "DM Sans".
 <br>
 
 _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
+
+#### Imagery
+
+The images on this website are made by leonardo.ai and borrowed from pinterest.
+</details><br>
+
+_<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
+
 #### Reusable Component Design
 
 This application emphasizes modularity and reusability. Each component is designed to function independently and can be easily repurposed in different contexts. Some components have multiple uses across the app and offer potential for further applications.
