@@ -1,6 +1,6 @@
 # PixelPals
 
-![x](documentation/Images/PixelGif.gif)
+![x](documentation/readme-image/PixelGif.gif)
 
 Pixelpals is a Full-Stack web application that empowers users to share engaging content, drawing inspiration from popular social media platforms like Instagram. Leveraging Django Rest Framework for robust backend operations and React for a responsive frontend, Pixelpals delivers a smooth, intuitive experience for users to browse, create, and interact with captivating content.
 <br>
