@@ -398,6 +398,10 @@ _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 <br>
 
 _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
+
+### Testing
+
+For the test results and solved issues, we refer to the [TESTING.md file](https://github.com/Enzolita/pixelpals-pp5/blob/main/TESTING.md).
 </details>
 
 <br>
