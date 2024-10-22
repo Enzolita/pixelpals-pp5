@@ -247,9 +247,7 @@ When you don't have any tickets availible it'll show `No Reports Available` at M
 - **Chat/Direct Messaging**: Introduce a chat or direct messaging function to facilitate user communication.
 - **Alert Notifications**: Implement alert notifications for broadcasting messages to all users.
 - **Block Feature**: Users being able to block another user for whatever reason that doesn't feel good for them.
-- **Profile Customization**: Allow users to customize their profiles with themes, backgrounds, and additional information fields.
-- **Content Recommendations**: Implement a recommendation system to suggest posts, users, or hashtags based on user activity and preferences.
-- **Enhanced Search**: Improve search functionality to include advanced filters and sorting options, making it easier for users to find specific content.
+- **Profile Customization**: Allow users to customize their profiles with themes, backgrounds.
 </details>
 <br>
 
