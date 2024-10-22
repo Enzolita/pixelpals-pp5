@@ -68,7 +68,7 @@ export default function MyReports() {
       <CustomModal
         show={showModal}
         handleClose={() => setShowModal(false)}
-        title="Thank You"
+        title="Report deleted"
         message="Your report has been deleted."
         className={styles.modalTitle} // Style for modal title
       />
