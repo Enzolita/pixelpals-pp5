@@ -227,6 +227,14 @@ Get in Touch: Use our report form to reach out about any issues you're experienc
 ![x](documentation/existing-feat/report-form.png)
 
 ![x](documentation/existing-feat/report-modal.png)
+
+**Ticket Form**
+<br>
+View your reports: Use our ticket form to view your reports, delete them or edit them.
+When you don't have any tickets availible it'll show `No Reports Available` at My Tickets page.
+
+![x](documentation/readme-image/my-tickets.gif)
+
 </details>
 
 ### Future Features
