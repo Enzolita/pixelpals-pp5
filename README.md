@@ -47,6 +47,24 @@ Visit the website: [Pixelpals](https://pixelpals-pp5-ee2d5ecf265c.herokuapp.com/
 ## API Backend
 
 [Pixelpals API README](https://github.com/Enzolita/pixelpals-backend/blob/main/README.md)
+### Agile Planning and Development
+
+<details>
+<summary>Is Pixelpals agile?</summary>
+<br>
+
+
+At Pixelpals, our planning and development process is guided by Agile methodologies and principles. While we don't strictly follow traditional Agile frameworks like scheduled sprints or scrums, we emphasize flexibility, continuous improvement, and swift adaptation to change. Instead of focusing on sprints, we prioritize developing epics that align with backend applications, addressing User Stories based on their priority.
+
+Our overarching strategy divides the project into three key phases: planning, development (which includes unit and functional testing), and continuous deployment. Documentation is created, reviewed, and updated throughout the process. Our approach is straightforward: we develop features in a logical order, prioritizing core functionalities before moving on to more complex aspects.
+
+When we encounter bugs or issues, we log them as bug issues and add them to our backlog, allowing development to proceed without interruption. This enables us to make progress in other areas while periodically reassessing and prioritizing the backlog based on severity and impact. This method helps us maintain momentum in development while systematically addressing and resolving any issues.
+
+We actively seek and analyze user feedback to pinpoint areas for improvement, ensuring that our product continuously evolves to meet user needs and expectations effectively.
+
+We used a project [kanban board](https://github.com/users/Enzolita/projects/6) to track progress.
+</details>
+
 #### MoSCoW Prioritization
 
 <details>
@@ -147,6 +165,7 @@ _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
     - Update - authenticated users can update their profile image, username and password, and edit and save comments, its title and save it.
     - Delete - authenticated users can delete their own comments and posts.
 
+
 **SignIn/SignUp Page** <br>
 
 Join the Fun: Creating an account is easy-peasy. After signing up, you’ll be whisked to the sign-in page. Already signed in? You’ll head straight to the home page.
@@ -202,7 +221,7 @@ Darkmode / Lightmode
 
 **Post Page**
 <br>
-Dive into Details: See all the nitty-gritty about a post, including comments. Edit or delete your posts easily. Tag posts with one category, and (once the bug’s fixed) multiple hashtags. The multi-hashtag feature is hidden for now due to [BUG#68](https://github.com/JaqiKal/pixavibe-frontend/issues/68). Like the category tagging, it offers a predefined list to select/deselect multiple hashtags. However, once a post is saved, you can't change the hashtags during edits. To avoid a bad user experience, we've temporarily hidden this feature in the belly of our scrumptious app.
+Dive into Details: See all the nitty-gritty about a post, including comments. Edit or delete your posts easily.
 
 Owner´s post(s), me, myself and I!
 
@@ -262,6 +281,7 @@ _<span style="color: blue;">[Back to Content](#table-of-contents)</span>_
 <br>
 The idea of ​​the color scheme of the application is a little towards blue and neutral white due to the darkmode component,
 which makes the backround either white or dark grey.
+
 <br>
 
 #### Typography
