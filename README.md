@@ -47,6 +47,26 @@ Visit the website: [Pixelpals](https://pixelpals-pp5-ee2d5ecf265c.herokuapp.com/
 ## API Backend
 
 [Pixelpals API README](https://github.com/Enzolita/pixelpals-backend/blob/main/README.md)
+#### MoSCoW Prioritization
+
+<details>
+<summary>MoSCow </summary>
+<br>
+By focusing on the Must Have features, the project ensures the highest priority tasks are completed first, delivering a functional and valuable product to users. The Should Have and Could Have features provide room for enhancements and future iterations, aligning with both the MoSCoW method and the Pareto principle for effective project management.
+
+- Must Have: <br>
+  Includes tasks that set up the project foundation and core functionalities necessary for the project to operate (setting up the environment, repositories, core CRUD operations, and essential user features).
+
+- Should Have: <br>
+  Enhances usability, maintainability, and user experience, but are not critical for the initial launch (responsive design, navigation improvements, additional user profile features).
+
+- Could Have: <br>
+  Adds value but can be deferred without impacting the core functionality (tagging, advanced user interactions, and feedback mechanisms).
+
+- Won't Have: <br>
+Deferred features that are not essential for the initial launch but could be considered for future phases (infinite scroll).
+<br>
+</details>
 
 ## The Structure Plane
 
