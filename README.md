@@ -215,10 +215,10 @@ Get in Touch: Use our report form to reach out about any issues you're experienc
 <summary>The following will be added in future iterations of this project:</summary>
 <br>
 
-- **Admin Page Expansion**: Enhance the admin page to manage various tasks, such as handling messages sent through the contact form. This would allow admins to respond directly to users from a dedicated admin-only page.
+- **Admin Page Expansion**: Enhance the admin page to manage various tasks, such as handling messages sent through the report form. This would allow admins to respond directly to users from a dedicated admin-only page.
 - **Chat/Direct Messaging**: Introduce a chat or direct messaging function to facilitate user communication.
 - **Alert Notifications**: Implement alert notifications for broadcasting messages to all users.
-- **Block Feature**: Users being able to block another user for whatever reason.
+- **Block Feature**: Users being able to block another user for whatever reason that doesn't feel good for them.
 - **Profile Customization**: Allow users to customize their profiles with themes, backgrounds, and additional information fields.
 - **Content Recommendations**: Implement a recommendation system to suggest posts, users, or hashtags based on user activity and preferences.
 - **Enhanced Search**: Improve search functionality to include advanced filters and sorting options, making it easier for users to find specific content.
