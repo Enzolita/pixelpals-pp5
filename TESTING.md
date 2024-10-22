@@ -8,8 +8,7 @@
   - [CSS](#css)
   - [Python](#python)
   - [Lighthouse](#lighthouse)
-- [Function Test](#function-test)
-  - [Custom Automated Testing](#custom-automated-testing)
+  - [Function Test](#function-test)
     - [Executed automatic test cases and results](#executed-automatic-test-cases-and-results)
   - [Custom Manual Testing](#custom-manual-testing)
     - [Executed manual test cases and results](#executed-manual-test-cases-and-results)
@@ -75,8 +74,7 @@ A detailed breakdown of the project's user stories categorized into various epic
 | As a logged in user I can view the posts I liked so that I can find the posts I enjoy the most | Create a view that fetches and displays posts liked by the authenticated user | |
 | As a logged in user I can view content filtered by users I follow so that I can keep up to date with what they are posting about | Implement a feed that displays posts from users followed by the authenticated user |
 | As a user I can keep scrolling through the images on the site, that are loaded for me automatically so that I don't have to click on "next page" etc | Implement infinite scroll functionality that fetches more posts as the user scrolls down | |
-| As a user, I want to add hashtags to my posts so that they are easier to find | Add a hashtag feature to the post creation form and store tags in the database | Not fully implemented, see [Known and unsolved issues](known-and-unsolved-issues) |
-| As a user, I want to search for posts by tags so that I can find related content | Implement a tag search feature that filters posts based on selected tags | |
+
 
 **EPIC - The Post Page**
 | Goals | How are they achieved? | Comment |
@@ -88,7 +86,7 @@ A detailed breakdown of the project's user stories categorized into various epic
 | As a user I can read comments on posts so that I can read what other users think about the posts | List comments below the post content on the post detail page | |
 | As an owner of a comment I can delete my comment so that I can control removal of my comment from the application | Add a delete button to each comment that sends a delete request to the API and removes the comment from the UI | |
 | As an owner of a comment I can edit my comment so that I can fix or update my existing comment | Add an edit button to each comment that opens a form for updating the comment's content | |
-| As a user, I want to add category to my posts so that they are easier to find. | Develop category feature in the API and provide UI elements for adding and displaying category on posts | |
+
 
 **EPIC - The Profile Page**
 | Goals | How are they achieved? | Comment |
@@ -100,9 +98,7 @@ A detailed breakdown of the project's user stories categorized into various epic
 | As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them | List all posts by the user on their profile page | |
 | As a logged in user I can edit my profile so that I can change my profile picture and bio | Add an edit profile button that opens a form for updating the profile picture and bio | |
 | As a logged in user I can update my username and password so that I can change my display name and keep my profile secure | Provide options for changing username and password in the user settings | |
-| As a developer, I want to implement a blocking functionality so that users do not have to see posts from users they have blocked | Develop a blocking feature in the API and provide UI controls for blocking users | |
-| As a user, I want to be able to block other users so that they cannot interact with my content | Add block buttons to user profiles that update the block status via the API | Moved to future feature backlog |
-| As a developer, I want to create a contact form that stores user queries, complaints, or suggestions in the Contact model so that the platform can handle user feedback | Implement a contact form that submits user feedback to the API and stores it in the database | |
+| As a developer, I want to create a report form that stores user queries, complaints, or suggestions in the Report model so that the platform can handle user feedback | Implement a report form that submits user feedback to the API and stores it in the database | |
 | As a user, I want to send feedback or queries to the platform administrators so that I can report issues or suggest improvements | Add a feedback form accessible from the user menu that submits feedback to the platform administrators | |
 
 </details>
@@ -150,7 +146,7 @@ Validation process was automated by using the 'CSS-validator npm package'. All p
 
 Vendor extensions are CSS properties or pseudo-elements specific to particular browser engines, prefixed with -webkit-, -moz-, etc. Pseudo-elements allow styling of parts of an element, such as scrollbars. In index.css, vendor extensions include -apple-system, -webkit-font-smoothing, and -moz-osx-font-smoothing. In App.module.css, vendor-specific pseudo-elements include ::-webkit-scrollbar, ::-webkit-scrollbar-track, and ::-webkit-scrollbar-thumb.
 
-Our project includes a CSS validation script `validate-css.js` that ensures all stylesheets adhere to web standards. This script uses the [W3C CSS Validator](http://jigsaw.w3.org/css-validator/validator) to check for errors and warnings in our CSS files. Vendor-specific properties and pseudo-elements are flagged as warnings, which are expected. The validation process helps maintain clean, error-free CSS, enhancing cross-browser compatibility and overall code quality. To run the validation, use the command npm run validate:css.
+Our project includes a CSS validation script `validate-css.js` that ensures all stylesheets adhere to web standards. This script uses the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) to check for errors and warnings in our CSS files. Vendor-specific properties and pseudo-elements are flagged as warnings, which are expected. The validation process helps maintain clean, error-free CSS, enhancing cross-browser compatibility and overall code quality. To run the validation, use the command npm run validate:css.
 
 <details>
 <summary>CSS validation results</summary>
